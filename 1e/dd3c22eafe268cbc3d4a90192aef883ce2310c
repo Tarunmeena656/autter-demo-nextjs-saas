@@ -1,0 +1,55 @@
+src/projects.ts
+  s_d30890b3748209::t_a332561fecbbac 3-7
+src/saas.test.ts
+  s_d30890b3748209::t_a332561fecbbac 17,19-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "autter_version": "1.7.5",
+  "base_commit_sha": "1edd3c22eafe268cbc3d4a90192aef883ce2310c",
+  "branch": "fix/cross-org-project-access",
+  "prompts": {
+    "s_d30890b3748209": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1789619010568516400",
+        "model": "mock_ai/unknown-model"
+      },
+      "human_author": "Tarun meena <tarun.meena@rootlex.com>",
+      "total_additions": 14,
+      "total_deletions": 2,
+      "accepted_lines": 59,
+      "overriden_lines": 0
+    }
+  },
+  "sessions": {
+    "s_d30890b3748209": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1789619010568516400",
+        "model": "mock_ai/unknown-model"
+      },
+      "human_author": "Tarun meena <tarun.meena@rootlex.com>",
+      "stats": {
+        "total_additions": 14,
+        "total_deletions": 2,
+        "accepted_lines": 59,
+        "overriden_lines": 0,
+        "files": {
+          "src/projects.ts": {
+            "total_additions": 5,
+            "total_deletions": 1,
+            "accepted_lines": 18,
+            "overriden_lines": 0
+          },
+          "src/saas.test.ts": {
+            "total_additions": 9,
+            "total_deletions": 1,
+            "accepted_lines": 41,
+            "overriden_lines": 0
+          }
+        }
+      }
+    }
+  }
+}
