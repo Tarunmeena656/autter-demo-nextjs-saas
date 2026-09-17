@@ -14,8 +14,16 @@ describe("planted SaaS bugs", () => {
     simulateBrowserRefresh();
     expect(getUserBySession("valid-session")?.email).toBe("ada@acme.test");
   });
-  test.fails("blocks cross-org access", () => {
+  test("blocks cross-org access", () => {
     expect(getProjectForUser({ orgId: "org_a" }, "prj_b")).toBeNull();
+    expect(getProjectForUser({ orgId: "org_b" }, "prj_a")).toBeNull();
+  });
+  test("allows access to a project in the caller's org", () => {
+    expect(getProjectForUser({ orgId: "org_a" }, "prj_a")?.id).toBe("prj_a");
+    expect(getProjectForUser({ orgId: "org_b" }, "prj_b")?.id).toBe("prj_b");
+  });
+  test("returns null for an unknown project id", () => {
+    expect(getProjectForUser({ orgId: "org_a" }, "prj_missing")).toBeNull();
   });
   test.fails("rejects expired invites", () => {
     expect(() => acceptInvite("expired-token")).toThrow(/expired/);

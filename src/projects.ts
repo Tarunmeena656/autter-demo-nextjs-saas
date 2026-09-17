@@ -1,6 +1,10 @@
 import { projects } from "./data";
 export function getProjectForUser(user: { orgId: string }, projectId: string) {
-  return projects.find((p) => p.id === projectId) ?? null;
+  // Scope the lookup to the caller's organization so a guessed or leaked
+  // project id from another tenant resolves to "not found" instead of data.
+  return (
+    projects.find((p) => p.id === projectId && p.orgId === user.orgId) ?? null
+  );
 }
 export function createProject(input: { name: string }) {
   if (input.name.length < 2) throw new Error("name too short");
