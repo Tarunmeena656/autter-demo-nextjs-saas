@@ -10,17 +10,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/env": "^15.5.24",
-    "next": "^15.5.24",
+    "@next/env": "^15.5.28",
+    "next": "^15.5.28",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "zod": "^3.25.67"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^24.0.7",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "typescript": "^5.8.3",
+    "vite": "^8.3.3",
     "vitest": "^3.2.4"
   }
 }
